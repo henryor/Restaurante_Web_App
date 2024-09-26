@@ -32,6 +32,7 @@ Este proyecto es una aplicación web desarrollada para la gestión integral de u
 
 ### Frontend (React)
 
+![image](https://github.com/user-attachments/assets/48c93b7e-1598-42a4-90e0-ba6114d8b34f)
 
 ## Contribuciones
 
