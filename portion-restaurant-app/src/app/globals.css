@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales personalizados */
+body {
+  background-color: #f5f5f5; /* Fondo gris claro */
+  color: #333; /* Color de texto oscuro */
+  font-family: "Arial", sans-serif; /* Fuente más sencilla */
+  line-height: 1.6; /* Mayor espacio entre líneas */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina padding predeterminado */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0; /* Elimina márgenes predeterminados en los encabezados */
+}
+
+header {
+  background-color: #ffffff; /* Fondo blanco para el encabezado */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav a {
+  color: #fffefe; /* Color de texto de los enlaces */
+}
+
+nav a:hover {
+  color: #000; /* Color más oscuro al pasar el mouse */
+}
+
+section {
+  padding: 2rem; /* Espaciado uniforme en las secciones */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+button {
+  background-color: #040405; /* Color de fondo para botones */
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados para botones */
+  padding: 0.5rem 1rem; /* Padding para botones */
+  cursor: pointer; /* Cursor pointer para indicar clickeable */
+}
+
+button:hover {
+  background-color: #3700b3; /* Color más oscuro para el hover */
+}
+
+input,
+textarea {
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 0.5rem; /* Padding en inputs */
+  width: 100%; /* Ancho completo para inputs */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+/* Estilos adicionales para el pie de página */
+footer {
+  background-color: #ffffff; /* Fondo blanco para el pie de página */
+  color: #333; /* Color de texto oscuro */
+}
+
+/* Estilos específicos para la página de administración */
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px; /* Padding general */
+}
+
+.header-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Espacio entre el título y el formulario */
+}
+
+.form-container {
+  max-width: 600px; /* Limitar el ancho del formulario */
+  width: 100%;
+  margin: 0 auto; /* Centramos el formulario horizontalmente */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
