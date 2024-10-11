@@ -1,6 +1,11 @@
 import "./globals.css";
+import { ReactNode } from "react"; // Importar ReactNode
 
-export default function Layout({ children }) {
+interface LayoutProps {
+  children: ReactNode; // Definir el tipo para children
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <html lang="es">
       <head>

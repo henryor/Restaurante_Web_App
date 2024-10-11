@@ -42,17 +42,29 @@ function ProductForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value, files } = e.target;
+    const target = e.target;
 
-    if (files && name === "image") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: files[0],
-      }));
+    // Verificar si el target es un elemento de entrada
+    if (target instanceof HTMLInputElement) {
+      const { name, value, files } = target;
 
-      const previewUrl = URL.createObjectURL(files[0]);
-      setImagePreview(previewUrl);
-    } else {
+      if (name === "image" && files && files.length > 0) {
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: files[0],
+        }));
+
+        const previewUrl = URL.createObjectURL(files[0]);
+        setImagePreview(previewUrl);
+      } else {
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+      }
+    } else if (target instanceof HTMLTextAreaElement) {
+      const { name, value } = target;
+
       setFormData((prevData) => ({
         ...prevData,
         [name]: value,
@@ -65,7 +77,12 @@ function ProductForm() {
 
     const data = new FormData();
     Object.keys(formData).forEach((key) => {
-      data.append(key, formData[key as keyof FormData]);
+      const value = formData[key as keyof FormData];
+
+      // Check if value is not null before appending
+      if (value !== null) {
+        data.append(key, value);
+      }
     });
 
     try {
@@ -87,6 +104,7 @@ function ProductForm() {
       console.error("Error al enviar el formulario:", error);
     }
   };
+
 
   const calculatePortions = () => {
     const gramsAvailable = parseFloat(formData.grams);

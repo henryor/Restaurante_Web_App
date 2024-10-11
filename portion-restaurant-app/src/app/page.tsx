@@ -61,10 +61,10 @@ const HomePage = () => {
             satisfacción del cliente.
           </p>
           <Image
-            src=""
+            src="" // Asegúrate de que esta sea una ruta válida para la imagen
             alt="Sobre Nosotros"
-            width={600}
-            height={400}
+            width={600} // Esto debe ser un número
+            height={400} // Esto también debe ser un número
             className="rounded-lg shadow-lg mx-auto"
           />
         </div>
@@ -126,7 +126,7 @@ const HomePage = () => {
             />
             <textarea
               placeholder="Mensaje"
-              rows ="5"
+              rows={5} 
               className="w-full p-3 border border-gray-300 rounded-lg"
             ></textarea>
             <button
