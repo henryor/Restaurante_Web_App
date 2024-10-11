@@ -1,4 +1,4 @@
-# Restaurante Web App
+# Restaurante Web App PortionX
 
 ## Descripción
 
@@ -7,11 +7,11 @@ Este proyecto es una aplicación web desarrollada para la gestión integral de u
 ## Tecnologías Utilizadas
 
 - **Frontend**: React (SPA) + Redux para la gestión del estado.
-- **Backend**: Flask con Flask-RESTful para las APIs REST.
+- **Backend**: nextJs para las APIs REST.
 - **Base de Datos**: PostgreSQL.
 - **Autenticación**: OAuth2.
-- **ORM**: Flask-SQLAlchemy.
-- **Migraciones**: Flask-Migrate para el manejo de la base de datos.
+- **ORM**: nextjs 
+- **Migraciones**: Vectra para el manejo de la base de datos.
 
 ## Funcionalidades Principales
 
@@ -28,7 +28,7 @@ Este proyecto es una aplicación web desarrollada para la gestión integral de u
 
 ## Instalación
 
-### Backend (Flask)
+### Backend (nextjs)
 
 ### Frontend (React)
 
